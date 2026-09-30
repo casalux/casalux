@@ -1,0 +1,19 @@
+BEGIN:VCARD
+VERSION:3.0
+N:;;;;
+FN:Casalux S.r.l.s.
+ORG:Casalux S.r.l.s.
+TITLE:Manutenzioni e Costruzioni Generali
+item1.TEL;TYPE=WORK,VOICE:+39 335 840 1227
+item1.X-ABLabel:Gianni
+item2.TEL;TYPE=WORK,VOICE:+39 351 594 1230
+item2.X-ABLabel:Erhan
+item3.TEL;TYPE=WORK,VOICE:+39 338 583 9702
+item3.X-ABLabel:Fadil
+EMAIL;TYPE=WORK,INTERNET:casa-lux@hotmail.com
+item4.EMAIL;TYPE=INTERNET:casa.luxsrls@pec.it
+item4.X-ABLabel:PEC
+ADR;TYPE=WORK:;;Via Roma 2;Roncade;TV;31056;Italia
+URL:https://casalux.github.io/casaluxsrls/
+NOTE:Nuove costruzioni\, ristrutturazioni\, cappotti termici\, rifacimento tetti e manutenzioni in tutto il Veneto. P.IVA 05537690264
+END:VCARD

@@ -1,31 +1,204 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<title>CASA LUX s.r.l.s</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Casalux · Contatti</title>
+<meta name="description" content="Casalux S.r.l.s., Manutenzioni e Costruzioni Generali, Roncade (TV). Chiama, scrivi su WhatsApp o salva il contatto.">
+<meta name="theme-color" content="#11161c">
+<link rel="canonical" href="https://casalux.github.io/casalux/">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Casalux S.r.l.s. · Contatti">
+<meta property="og:description" content="Manutenzioni e Costruzioni Generali, Roncade (TV). Chiama, scrivi su WhatsApp o salva il contatto.">
+<meta property="og:image" content="https://casalux.github.io/casaluxsrls/media/og-image.jpg">
+<meta property="og:url" content="https://casalux.github.io/casalux/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="sfondo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&amp;family=Fraunces:ital,opsz,wght@1,9..144,300&amp;display=swap" rel="stylesheet">
 <style>
-body { font-family: Arial, sans-serif; background:#f5f5f5; text-align:center; padding:30px; }
-.card { background:white; max-width:420px; margin:auto; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);}
-img.logo { max-width:260px; margin-bottom:20px; }
-a.btn { display:block; margin:12px 0; padding:14px; background:#111; color:white; text-decoration:none; border-radius:8px; }
-.small { color:#666; font-size:14px; margin-top:10px;}
+:root{
+  --ink:#11161c;--slate:#18212a;--slate-2:#1f2a34;--steel:#8196a9;
+  --line:rgba(129,150,169,.2);--paper:#eef0ee;--paper-dim:#b9c2ca;
+  --gold:#d6aa5c;--gold-soft:#e8c98f;--wa:#25d366;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--paper);font-family:"Jost",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100svh}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+img,svg{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+
+.card{max-width:460px;margin:0 auto;min-height:100svh;display:flex;flex-direction:column;padding:0 16px calc(24px + env(safe-area-inset-bottom))}
+
+/* testata: la casa in linee dorate del sito, con il logo sopra */
+.top{position:relative;margin:0 -16px;padding:calc(28px + env(safe-area-inset-top)) 16px 26px;text-align:center;overflow:hidden;isolation:isolate}
+.top .bg{position:absolute;inset:0;z-index:-2;background:url(sfondo.jpg) 58% 40%/cover no-repeat;opacity:.62}
+.top::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(17,22,28,.25) 0%,rgba(17,22,28,.55) 55%,var(--ink) 100%)}
+.top img{width:min(240px,66vw);height:auto;margin:56px auto 16px;filter:drop-shadow(0 6px 18px rgba(0,0,0,.55))}
+.top p{font-size:.74rem;line-height:1.8;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.top h1{font-weight:300;font-size:1.55rem;line-height:1.2;margin-top:10px}
+.top h1 em{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:300;color:var(--gold-soft)}
+
+/* azioni principali */
+.main{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+.big{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:92px;border-radius:20px;font-weight:500;font-size:1.02rem;transition:transform .25s var(--ease),filter .25s}
+.big svg{width:26px;height:26px}
+.big:active{transform:scale(.97)}
+.call{background:var(--gold);color:var(--ink)}
+.wa{background:var(--wa);color:#07210f}
+.save{grid-column:1/-1;flex-direction:row;min-height:58px;gap:10px;border:1px solid rgba(214,170,92,.55);color:var(--gold-soft);background:rgba(214,170,92,.07)}
+.save svg{width:22px;height:22px}
+
+/* elenco */
+.list{margin-top:18px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(165deg,var(--slate),var(--ink));overflow:hidden}
+.row{display:flex;align-items:center;gap:14px;padding:14px 16px;min-height:62px}
+.row+.row{border-top:1px solid var(--line)}
+.row:active{background:rgba(214,170,92,.08)}
+.row .ic{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:rgba(214,170,92,.12);color:var(--gold);flex:none}
+.row .ic svg{width:17px;height:17px}
+.row .tx{flex:1;min-width:0}
+.row b{display:block;font-weight:500}
+.row small{display:block;color:var(--paper-dim);font-size:.88rem;overflow-wrap:anywhere}
+.row .go{color:var(--steel);width:16px;height:16px;flex:none}
+
+.services{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:20px}
+.services span{font-size:.8rem;color:var(--paper-dim);border:1px solid var(--line);border-radius:999px;padding:.35em .85em}
+.fine{margin-top:auto;padding-top:24px;text-align:center;font-size:.74rem;color:var(--steel);line-height:1.7}
+
+/* pop-up */
+dialog{border:0;padding:0;background:transparent;color:var(--paper);width:min(420px,calc(100% - 32px));max-width:none;margin:auto}
+dialog::backdrop{background:rgba(8,11,14,.75);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+dialog[open]{animation:pop .35s var(--ease)}
+@keyframes pop{from{opacity:0;transform:translateY(16px)}}
+.box{position:relative;padding:28px 22px 22px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(165deg,var(--slate-2),var(--ink));box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.box .eye{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.box h2{font-weight:300;font-size:1.6rem;margin:.3em 0 .2em}
+.box .hint{color:var(--paper-dim);font-size:.93rem;margin-bottom:16px}
+.box ul{list-style:none;display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:14px;padding:13px 15px;border-radius:16px;border:1px solid var(--line);background:rgba(17,22,28,.6)}
+.opt:active{background:rgba(214,170,92,.08)}
+.opt .av{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(214,170,92,.14);border:1px solid rgba(214,170,92,.35);color:var(--gold-soft);font-weight:500;flex:none}
+.opt .tx{flex:1}
+.opt b{display:block;font-weight:500}
+.opt small{color:var(--paper-dim);font-variant-numeric:tabular-nums}
+.opt>svg{width:22px;height:22px;flex:none}
+#dCall .opt>svg{color:var(--gold)}
+#dWa .opt>svg{color:var(--wa)}
+.x{position:absolute;top:12px;right:12px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);font-size:1.4rem;line-height:1;color:var(--paper-dim)}
+
+/* comparsa iniziale, una sola volta */
+.in{animation:rise .7s var(--ease) both}
+.in.d1{animation-delay:.08s}.in.d2{animation-delay:.16s}.in.d3{animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}}
+@media (prefers-reduced-motion:reduce){.in,dialog[open]{animation:none}.big:active{transform:none}}
+@media (min-width:700px){.card{padding-top:24px}.top{border-radius:0 0 28px 28px}}
 </style>
 </head>
 <body>
-<div class="card">
-<img src="logo.jpg" class="logo">
-<h2>CASA LUX s.r.l.s</h2>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3z"/></symbol>
+  <symbol id="i-nav" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 11 22 2l-9 19-2-8-8-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></g></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></g></symbol>
+  <symbol id="i-save" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="4"/><path d="M3 21a7 7 0 0 1 11-5.7M19 14v6M16 17h6"/></g></symbol>
+  <symbol id="i-go" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6"/></symbol>
+</svg>
 
-<a class="btn" href="tel:3515941230">📞 351 594 1230</a>
-<a class="btn" href="tel:3358401227">📞 335 840 1227</a>
-<a class="btn" href="tel:3385839702">📞 338 583 9702</a>
+<main class="card">
+  <header class="top">
+    <div class="bg" aria-hidden="true"></div>
+    <img src="logo-casalux.png" alt="Casalux" width="971" height="264" class="in">
+    <p class="in d1">Manutenzioni e Costruzioni Generali<br>Roncade (TV)</p>
+    <h1 class="in d2">Costruiamo il futuro, <em>ristrutturiamo il valore.</em></h1>
+  </header>
 
-<a class="btn" href="mailto:casa-lux@hotmail.com">✉️ casa-lux@hotmail.com</a>
-<a class="btn" href="mailto:casa.luxsrls@pec.it">📨 casa.luxsrls@pec.it</a>
+  <div class="main in d3">
+    <button class="big call" type="button" data-open="dCall" aria-haspopup="dialog"><svg aria-hidden="true"><use href="#i-phone"/></svg>Chiama</button>
+    <button class="big wa" type="button" data-open="dWa" aria-haspopup="dialog"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</button>
+    <a class="big save" href="casalux.vcf" download="Casalux.vcf"><svg aria-hidden="true"><use href="#i-save"/></svg>Salva il contatto in rubrica</a>
+  </div>
 
-<p class="small">Via Roma 2, Roncade (TV)</p>
-</div>
+  <nav class="list in d3" aria-label="Altri contatti">
+    <a class="row" href="https://www.google.com/maps/dir/?api=1&amp;destination=Via%20Roma%202%2C%2031056%20Roncade%20TV%2C%20Italia" target="_blank" rel="noopener">
+      <span class="ic"><svg aria-hidden="true"><use href="#i-nav"/></svg></span>
+      <span class="tx"><b>Indicazioni stradali</b><small>Via Roma 2, 31056 Roncade (TV)</small></span>
+      <svg class="go" aria-hidden="true"><use href="#i-go"/></svg></a>
+    <a class="row" href="https://casalux.github.io/casaluxsrls/contatti.html#preventivo">
+      <span class="ic"><svg aria-hidden="true"><use href="#i-doc"/></svg></span>
+      <span class="tx"><b>Richiedi un preventivo</b><small>Sopralluogo e preventivo gratuiti</small></span>
+      <svg class="go" aria-hidden="true"><use href="#i-go"/></svg></a>
+    <a class="row" href="https://casalux.github.io/casaluxsrls/">
+      <span class="ic"><svg aria-hidden="true"><use href="#i-web"/></svg></span>
+      <span class="tx"><b>Visita il sito</b><small>Servizi, lavori e chi siamo</small></span>
+      <svg class="go" aria-hidden="true"><use href="#i-go"/></svg></a>
+    <a class="row" href="mailto:casa-lux@hotmail.com">
+      <span class="ic"><svg aria-hidden="true"><use href="#i-mail"/></svg></span>
+      <span class="tx"><b>Email</b><small>casa-lux@hotmail.com</small></span>
+      <svg class="go" aria-hidden="true"><use href="#i-go"/></svg></a>
+    <a class="row" href="mailto:casa.luxsrls@pec.it">
+      <span class="ic"><svg aria-hidden="true"><use href="#i-mail"/></svg></span>
+      <span class="tx"><b>PEC</b><small>casa.luxsrls@pec.it</small></span>
+      <svg class="go" aria-hidden="true"><use href="#i-go"/></svg></a>
+  </nav>
+
+  <div class="services" aria-label="Servizi">
+    <span>Ristrutturazioni</span><span>Nuove costruzioni</span><span>Cappotti termici</span><span>Rifacimento tetti</span><span>Manutenzioni</span>
+  </div>
+
+  <footer class="fine">CASALUX S.R.L.S. · Manutenzioni e Costruzioni Generali<br>P.IVA 05537690264</footer>
+</main>
+
+<dialog id="dCall" aria-labelledby="tCall">
+  <div class="box">
+    <button class="x" type="button" data-close aria-label="Chiudi">×</button>
+    <p class="eye">Telefono</p>
+    <h2 id="tCall">Chi vuoi chiamare?</h2>
+    <p class="hint">Scegli il referente per avviare la chiamata.</p>
+    <ul>
+      <li><a class="opt" href="tel:+393358401227"><span class="av" aria-hidden="true">G</span><span class="tx"><b>Gianni</b><small>+39 335 840 1227</small></span><svg aria-hidden="true"><use href="#i-phone"/></svg></a></li>
+      <li><a class="opt" href="tel:+393515941230"><span class="av" aria-hidden="true">E</span><span class="tx"><b>Erhan</b><small>+39 351 594 1230</small></span><svg aria-hidden="true"><use href="#i-phone"/></svg></a></li>
+      <li><a class="opt" href="tel:+393385839702"><span class="av" aria-hidden="true">F</span><span class="tx"><b>Fadil</b><small>+39 338 583 9702</small></span><svg aria-hidden="true"><use href="#i-phone"/></svg></a></li>
+    </ul>
+  </div>
+</dialog>
+
+<dialog id="dWa" aria-labelledby="tWa">
+  <div class="box">
+    <button class="x" type="button" data-close aria-label="Chiudi">×</button>
+    <p class="eye">WhatsApp</p>
+    <h2 id="tWa">A chi vuoi scrivere?</h2>
+    <p class="hint">Scegli il referente: si apre la chat su WhatsApp.</p>
+    <ul>
+      <li><a class="opt" href="https://wa.me/393358401227?text=Buongiorno%2C%20vi%20contatto%20dal%20biglietto%20da%20visita%20Casalux." target="_blank" rel="noopener"><span class="av" aria-hidden="true">G</span><span class="tx"><b>Gianni</b><small>+39 335 840 1227</small></span><svg aria-hidden="true"><use href="#i-wa"/></svg></a></li>
+      <li><a class="opt" href="https://wa.me/393515941230?text=Buongiorno%2C%20vi%20contatto%20dal%20biglietto%20da%20visita%20Casalux." target="_blank" rel="noopener"><span class="av" aria-hidden="true">E</span><span class="tx"><b>Erhan</b><small>+39 351 594 1230</small></span><svg aria-hidden="true"><use href="#i-wa"/></svg></a></li>
+      <li><a class="opt" href="https://wa.me/393385839702?text=Buongiorno%2C%20vi%20contatto%20dal%20biglietto%20da%20visita%20Casalux." target="_blank" rel="noopener"><span class="av" aria-hidden="true">F</span><span class="tx"><b>Fadil</b><small>+39 338 583 9702</small></span><svg aria-hidden="true"><use href="#i-wa"/></svg></a></li>
+    </ul>
+  </div>
+</dialog>
+
+<script>
+(() => {
+  document.addEventListener('click', e => {
+    const t = e.target.closest('[data-open]');
+    if (!t) return;
+    e.preventDefault();
+    const d = document.getElementById(t.dataset.open);
+    if (d && d.showModal) d.showModal();
+  }, true);
+  document.querySelectorAll('dialog').forEach(d => d.addEventListener('click', e => {
+    if (e.target === d || e.target.closest('[data-close]')) d.close();
+    else if (e.target.closest('.opt')) setTimeout(() => d.close(), 150);
+  }));
+})();
+</script>
 </body>
 </html>
